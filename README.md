@@ -72,7 +72,7 @@ A continuación se muestra el código:
           past = past - 1
         return list1
     
-  La siguiente función divide la lista en sublistas
+  La siguiente función divide la lista en sublistas.
     
     def list_partition(l):
     '''Return: 
