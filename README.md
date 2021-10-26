@@ -928,7 +928,7 @@ A continuación se muestra el código:
          print("Función Multiproceso")
          with concurrent.futures.ProcessPoolExecutor() as executor: 
           inicio = default_timer()
-          a(analysis)            
+          a(analysis)            #Acá se ingresa el nombre de la función que desea aplicarle la función multiproceso con los parámetros de la misma.
           fin = default_timer()
           executor.submit(a)  
          print("El ejercicio a con la función multiproceso tardó: ", inicio-fin)
@@ -940,7 +940,7 @@ A continuación se muestra el código:
     
          print("Función Secuencial")
          inicio = default_timer()
-         a(analysis)
+         a(analysis)            #Acá se ingresa el nombre de la función que desea aplicarle la función secuencial con los parámetros de la misma.
          fin = default_timer()
         print("El ejercicio a con la función secuencial tardó: ", inicio-fin)
         print("\n")
