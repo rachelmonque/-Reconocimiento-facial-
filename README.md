@@ -8,10 +8,6 @@ import concurrent.futures
 
 from timeit import default_timer
 
-import numpy as np
-
-from matplotlib import pyplot as plt
-
 import sys
 
 import requests
@@ -22,9 +18,7 @@ import cognitive_face as CF
 
 from PIL import Image, ImageDraw, ImageFont
 
-import cv2
-
-Para utilizar la herrramienta de microsoft azure solamente se debe crear un repositorio y posteriormente ingresar un KEY y un URL que le genera su API.
+Para utilizar la herrramienta de Microsoft Azure solamente se debe crear un repositorio y posteriormente ingresar un KEY y un URL que le genera su API.
 Ejemplo:
 
 SUBSCRIPTION_KEY = 'bdd40bc3zb2a33h998jn0jl34x85ui9ek2' #Ingrese su KEY
@@ -34,14 +28,14 @@ CF.BaseUrl.set(BASE_URL)
 
 CF.Key.set(SUBSCRIPTION_KEY)
 
-A continuacion se muestra el código:
+A continuación se muestra el código:
 
    La siguiente lista vacia lo que hace es guardar la cantidad de veces que se ejecuta un ejercicio.
    
     history_list = []
 
 
-   La siguiente funcion lo que hace es mostrar un rectangulo en el rostro de la persona.
+   La siguiente función lo que hace es mostrar un rectangulo en el rostro de la persona.
 
     def show_image(path, faces):
     
@@ -56,7 +50,7 @@ A continuacion se muestra el código:
 
     image.show()
     
-   A continuacion se muestran 2 diferentes ordenamientos para listas que seran utilizados más adelante:
+   A continuación se muestran 2 diferentes ordenamientos para listas que seran utilizados más adelante:
    
    El primer ordenamiento es el bubble este lo que hace es ordenar las listas con sublistas en su posición descrita por un rango de 10
    
@@ -78,7 +72,7 @@ A continuacion se muestra el código:
           past = past - 1
         return list1
     
-  La siguiente funcion divide la lista en sublistas
+  La siguiente función divide la lista en sublistas
     
     def list_partition(l):
     '''Return: 
@@ -119,7 +113,7 @@ A continuacion se muestra el código:
                  cont=cont+1
         return(list1)
     
-   La siguiente funcion obtiene las caracteristicas de las personas de una imagen.
+   La siguiente función obtiene las características de las personas de una imagen.
    
     def emotions(picture)
     '''Arguments: picture {string} -- es la imagen
@@ -183,7 +177,7 @@ A continuacion se muestra el código:
          str_out_history= ("Option 'a' was executed and the result is: ", str_out)
          history_list.append(str_out_history)
 
-   La siguiente funcion Muestra una lista con todas las edades de las personas e indica quién es la persona de mayor edad.
+   La siguiente función muestra una lista con todas las edades de las personas e indica quién es la persona de mayor edad.
     
     def b(analysis):
     '''Arguments: 
@@ -312,7 +306,7 @@ A continuacion se muestra el código:
         str_out_history= ("Option 'c' was executed and the result is: ", str_out)
         history_list.append(str_out_history)
 
-   La siguiente funcion extrae los datos más altos de la lista
+   La siguiente función extrae los datos más altos de la lista
    
     def higher(lista):
     '''Arguments: 
@@ -329,7 +323,7 @@ A continuacion se muestra el código:
                 higher=x
          return higher 
     
-   La siguiente funcion ordena la lista con sublistas de menor a mayor
+   La siguiente función ordena la lista con sublistas de menor a mayor
     
     def ordering(lista):
     '''Arguments: 
@@ -344,7 +338,7 @@ A continuacion se muestra el código:
          lista.remove(Higher)
         return newlist 
 
-   La siguiente funcion crea una lista con sublistas para mostrar la edad y el sexo de las caras en las imágenes.
+   La siguiente función crea una lista con sublistas para mostrar la edad y el sexo de las caras en las imágenes.
    
    Las listas están en un rango de 10 y se ordenan utilizando el método de ordenación burbuja.
    
@@ -371,7 +365,7 @@ A continuacion se muestra el código:
        str_out_history = ('Option d was executed and the result is: ', str_out)
        history_list.append(str_out_history)
 
-   La siguiente funcion muestra la edad de todas las personas presentes en una imagen en
+   La siguiente función muestra la edad de todas las personas presentes en una imagen en
    una lista y finalmente el faceId y la edad de la(s) persona(s) que se
    más cercana a la edad media con un rango de + - 5 años.
    
@@ -419,9 +413,9 @@ A continuacion se muestra el código:
         str_out_history = ('Option e was executed and the result is: ', str_out)
         history_list.append(str_out_history)
 
-   La siguiente funcion crea una lista con sublistas que muestran la edad y el género de las caras en las imágenes.
+   La siguiente función crea una lista con sublistas que muestran la edad y el género de las caras en las imágenes.
    
-   Tambien muestra las personas separadas por género en sublistas, el género masculino va primero, y las sublistas 
+   También muestra las personas separadas por género en sublistas, el género masculino va primero, y las sublistas 
    se ordenan utilizando el método de ordenación quicksort.
    
     def f(analysis):
@@ -467,7 +461,7 @@ A continuacion se muestra el código:
         str_out_history = ('Option f was executed and the result is: ', str_out)
         history_list.append(str_out_history)
  
-   La siguiente funcion crea una lista con sublistas para mostrar el faceId, la edad y el sexo de las caras presentes en las imágenes. 
+   La siguiente función crea una lista con sublistas para mostrar el faceId, la edad y el sexo de las caras presentes en las imágenes. 
    
    Se ordena por edad utilizando el método de ordenación por inserción.
 
@@ -493,7 +487,7 @@ A continuacion se muestra el código:
         str_out_history= ("Option 'g' was executed and the result is: ", str_out)
         history_list.append(str_out_history)
 
-  La siguiente funcion muestra el faceId y el color de pelo más predominante de cada persona.
+  La siguiente función muestra el faceId y el color de pelo más predominante de cada persona.
    
     def h(analysis):
      '''Arguments:
@@ -528,7 +522,7 @@ A continuacion se muestra el código:
             str_out_history= ("Option 'h' was executed and the result is: ", str_out)
             history_list.append(str_out_history)
    
-   La siguiente funcion muestra la caraId y la emoción más predominante de una persona.
+   La siguiente función muestra la caraId y la emoción más predominante de una persona.
    
     def i(analysis):
     '''Arguments: 
@@ -554,7 +548,7 @@ A continuacion se muestra el código:
         str_out_history = ('Option i was executed and the result is: ', str_out)
         history_list.append(str_out_history)
 
-  La siguiente funcion muestra los accesorios que lleva una persona.
+  La siguiente función muestra los accesorios que lleva una persona.
  
     def j(analysis):
      '''Argumentos:
@@ -581,7 +575,7 @@ A continuacion se muestra el código:
             str_out_history = ('Option j was executed and the result is: ', str_out)
             history_list.append(str_out_history)
  
-   La siguiente funcion muestra la imagen con un rectángulo en las caras
+   La siguiente función muestra las imagenes con un rectángulo en la cara
    
     def k(analysis,picture):
      '''Arguments:
@@ -599,7 +593,7 @@ A continuacion se muestra el código:
         str_out_history= ("Option k was executed and the result was to show image with a rectangle in the faces")
         history_list.append(str_out_history)
 
-   La siguiente funcion muestra la persona que tiene la media de felicidad más alta pero menor que la media de edad de las personas 
+   La siguiente función muestra la persona que tiene la media de felicidad más alta pero menor que la media de edad de las personas 
    
     def l(analysis):
     '''Arguments: 
@@ -639,7 +633,7 @@ A continuacion se muestra el código:
          str_out_history= ("Option 'l' was executed and the result is: ", str_out)
          history_list.append(str_out_history)
 
-   La siguiente funcion muestra a la persona que tiene la media más alta de felicidad y que está por debajo de la media de edad de las personas de la foto.
+   La siguiente función muestra a la persona que tiene la media más alta de felicidad y que está por debajo de la media de edad de las personas de la foto.
   
     def m(analysis):
      ''''Arguments: 
@@ -679,7 +673,7 @@ A continuacion se muestra el código:
          str_out_history= ("Option 'm' was executed and the result is: ", str_out)
          history_list.append(str_out_history)
 
-   La siguiente funcion muestra un rectángulo las caras de las personas con más barba patillas y bigote.
+   La siguiente función muestra un rectángulo las caras de las personas con más barba patillas y bigote.
     
    
     
@@ -714,7 +708,7 @@ A continuacion se muestra el código:
          str_out_history = ('Option n was executed and the result was to show the image marking the person with the most beard, sideburns and mustache')
          history_list.append(str_out_history)
 
-   La siguiente funcion muestra a las mujeres que llevan gafas 
+   La siguiente función muestra a las mujeres que llevan gafas 
   
     def o(analysis):
      '''Arguments:
@@ -741,9 +735,7 @@ A continuacion se muestra el código:
         str_out_history= ("Option 'o' was executed and the result is: ", str_out)
         history_list.append(str_out_history)
 
-   La siguiente funcion muestra a la persona que tiene el pelo más rubio y es hombre  
-   
-   Argumentos: analysis {list} -- es una lista con la información de las personas 
+   La siguiente función muestra a la persona que tiene el pelo más rubio y es hombre  
 
     def p(analysis):
     '''Arguments: 
@@ -774,20 +766,19 @@ A continuacion se muestra el código:
        str_out_history= ("Option 'p' was executed and the result is: ", str_out)
        history_list.append(str_out_history)    
 
-   La siguiente funcion permite realizar dos funciones más
-   
-   
-    
+   La siguiente función permite realizar dos consultas más
+      
     def q():
         print("\n Consulta 'q'\n")
    
         q1(analysis)
         q2(analysis)
 
-   La siguiente funcion muestra el más joven de todas las edades contenidas en la lista
+   La siguiente función muestra el más joven de todas las edades contenidas en la lista
     
     def q1(analysis):
-     '''Arguments: analysis {list} -- es una lista con la información de las personas'''
+     '''Arguments: 
+         analysis {list} -- es una lista con la información de las personas'''
     
         print('\nProposal 1\n')
         aux = 150
@@ -807,7 +798,7 @@ A continuacion se muestra el código:
         str_out_history = ('Option q1 was executed and the result is: ', str_out)
         history_list.append(str_out_history)
     
-  La siguiente funcion muestra el porcentaje de una persona de emoción neutral.
+  La siguiente función muestra el porcentaje de emoción neutral en una persona
    
     def q2(analysis):
     '''Arguments: 
@@ -824,7 +815,7 @@ A continuacion se muestra el código:
         str_out_history = ('Option q2 was executed and the result is: ', str_out)
         history_list.append(str_out_history)
 
-  La siguiente funcion guarda cada consulta que se hace en una lista para mantener un historial 
+  La siguiente función guarda cada consulta que se hace en una lista para mantener un historial 
    
     def r(analysis):
     ''Arguments: 
@@ -835,7 +826,7 @@ A continuacion se muestra el código:
          print(x)
          print('\n')
 
-   La siguiente funcion realiza un informe de consulta con 5 imágenes que muestran más de 5 
+   La siguiente función realiza un informe de consulta con 5 imágenes que muestran más de 5 
    personas por imagen e incluye todas las consultas descritas anteriormente.
 
     def s():
@@ -851,7 +842,7 @@ A continuacion se muestra el código:
          cont=cont+1
          z=z+1
 
-   La siguiente funcion permite ejecutar todas las consultas
+   La siguiente función permite ejecutar todas las consultas
     
     def total_consultation(analysis,picture):
     '''Arguments :
@@ -878,7 +869,7 @@ A continuacion se muestra el código:
         q()
         r(analysis)
     
-  El codigo a continoacion crea un  menu de consultas
+  El codigo a continuación crea un  menú de consultas
    
     if __name__ == "__main__":
          picture = input("Enter the path of the image:")
@@ -929,7 +920,7 @@ A continuacion se muestra el código:
             print("error")
           inquiries= input("\nenter a letter of the query to be made (Type 't' to exit): ")
 
-   Finalmente tenemos la funcion multiproceso, lo que hace es optimizar un proceso a realizar
+   Finalmente tenemos la función multiproceso, lo que hace es optimizar un proceso a realizar
    
    Función Multiproceso
 
@@ -942,7 +933,7 @@ A continuacion se muestra el código:
          print("El ejercicio a con la función multiproceso tardó: ", inicio-fin)
          print("\n")
   
-   La funcion secuencial nos muestra el tiempo sin ser optimizado con la funcion multiproceso
+   La funcion secuencial nos muestra el tiempo sin ser optimizado con la función multiproceso
 
    Función Secuencial
     
